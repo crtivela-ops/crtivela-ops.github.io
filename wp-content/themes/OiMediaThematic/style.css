@@ -1,0 +1,233 @@
+/*   
+Theme Name: Oi Media Thematic
+Theme URI: 
+Description: Use this theme to start your Thematic Child Theme development.
+Author: Oliver I. Shipley
+Author URI: http://themeshaper.com/
+Template: thematic
+Version: 1.0
+Tags: white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+.
+The Thematic Theme is copyright Ian Stewart http://themeshaper.com/
+This work, like WordPress, is released under GNU General Public License, version 2 (GPL).
+.
+
+*/
+
+/* Reset browser defaults */
+@import url('/wp-content/themes/thematic/library/styles/reset.css');
+
+/* Apply basic typography styles */
+@import url('/wp-content/themes/thematic/library/styles/typography.css');
+
+/* Apply a basic layout */
+@import url('/wp-content/themes/thematic/library/layouts/2c-r-fixed.css');
+
+/* Apply basic image styles */
+@import url('/wp-content/themes/thematic/library/styles/images.css');
+
+/* Apply default theme styles and colors */
+/* It's better to actually copy over default.css into this file (or link to a copy in your child theme) if you're going to do anything outrageous */
+@import url('/wp-content/themes/thematic/library/styles/default.css');
+
+/* Prepare theme for plugins */
+@import url('/wp-content/themes/thematic/library/styles/plugins.css');
+
+/* The rest of the header may need margin and padding removed
+    for this to work properly--play around with it */
+	
+/* =Blog Title 
+-------------------------------------------------------------- */
+
+#blog-title a {
+display:block;
+text-indent:-9000px;
+height: 150px; /* height of your header, like 180px */
+width: 940px; /* width of your header, like 940px */
+background:url(/wp-content/uploads/2012/06/header_image1.png) no-repeat top center;
+}
+#blog-description {
+position:absolute;
+left:-9000px; /* We avoid display:none because it's bad for SEO */
+}
+
+/* =Header
+-------------------------------------------------------------- */
+
+#header {
+    z-index:2;
+}
+#branding {
+    padding:10px 20px;
+}
+#blog-title {
+    font-family:Arial,sans-serif;
+    font-size:34px;
+    font-weight:bold;
+    line-height:40px;
+}
+#blog-title a {
+    color:#000;
+    text-decoration:none;
+}
+#blog-title a:active,
+#blog-title a:hover {
+    color: #FF4B33;
+}
+#blog-description {
+    color:#666;
+    font-size:13px;
+    font-style:italic;
+}
+
+/* =Navigation
+-------------------------------------------------------------- */
+
+.navigation {
+    color:#666;
+    font-size:13px;
+    line-height:18px;
+    margin:0px 0 22px 0;
+    overflow:hidden;
+}
+.navigation a {
+    color:#F00;
+	font-size:22px;
+	line-height:28px;
+    font-style:italic;
+    text-decoration:none;
+}
+.navigation a:active,
+.navigation a:hover {
+    color: #FF4B33;
+}
+.navigation .meta-nav {
+    font-style:normal;
+}
+.nav-previous {
+	float: left;
+	width:50%;
+}
+.nav-next {
+	float: right;
+	width:50%;
+	text-align:right;
+}
+#nav-above,#nav-below {
+	width: 100%;
+}
+#nav-above {
+    display:none;
+}
+.paged #nav-above {
+    display:block;
+    padding:0 0 44px 0;
+}
+/* =Asides, Sidebars & Widget-Ready Areas
+-------------------------------------------------------------- */
+
+.aside,
+.aside input {
+    font-size:13px;
+    line-height:18px;
+    margin-bottom:6px;
+}
+.aside p,
+.aside ul,
+.aside ol,
+.aside dd,
+.aside pre {
+    margin-bottom:18px;
+}
+.aside pre,
+.aside code {
+    font-size:12px;
+    line-height:18px;
+}
+.aside .current-menu-item a,
+.aside .current_page_item a {
+    color: #FF4B33;
+}
+.aside .current-menu-item .menu-item a,
+.aside .current_page_item .menu-item a {
+    color:#666;
+}
+.aside .current-menu-item .menu-item a:hover,
+.aside .current-menu-item .menu-item a:active,
+.aside .current_page_item .menu-item a:hover,
+.aside .current_page_item .menu-item a:active {
+    color: #FF4B33;
+}
+.aside {
+    color:#666;
+}
+.aside a {
+    color:#666;
+}
+.aside a:active,
+.aside a:hover {
+    color: #FF4B33;
+}
+.aside h3 {
+    font-size:22px;
+	color:#FF0000;
+    font-style:italic;
+    line-height:32px;
+}
+.aside h3 a {
+	color:#FF0000;
+    text-decoration:none;
+}
+.aside caption {
+    font-size:11px;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+}
+.aside ul {
+    list-style:none;
+    margin-left:0;
+}
+.aside ul ul {
+    list-style:disc;
+    margin:0 0 22px 20px;
+}
+.aside ul ul li {
+    padding:1px 0;
+}
+.aside ul ul ul {
+    margin-bottom:0;
+}
+.aside form,
+.aside table {
+    margin-bottom:22px;
+}
+.aside table {
+    border:none;
+}
+.aside thead {
+    border:1px solid #ccc;
+}
+.aside tbody {
+    border:1px solid #ccc;
+}
+.aside th, .aside td {
+    border-right:1px solid #ccc;
+    padding:.25em .8em;
+}
+.aside tfoot tr {
+    border:none;
+}
+.aside tfoot td {
+    border-color:transparent;
+}
+.widget_tag_cloud {
+    margin:0 0 22px 0;
+}
+.aside #searchsubmit {
+	display: none;	
+}
